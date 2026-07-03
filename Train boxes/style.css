@@ -1,0 +1,38 @@
+
+table{
+    border-collapse: collapse;
+    border:1px solid #ccc;
+
+
+    margin: 20px auto;
+}
+
+td{
+    width:100px;
+    height:70px;
+    border:0px solid #ccc;
+    text-align:center;
+    vertical-align:middle;
+    font-family:Arial, sans-serif;
+    font-size:20px;
+    
+}
+
+#seatLayout {
+    margin-top: 20px;
+}
+.green {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border: 1px;
+}
+
+.green:hover {
+    background-color: darkgreen;
+}
+
+.selected {
+    background-color: red;
+    color: white;
+}

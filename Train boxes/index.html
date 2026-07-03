@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+
+        <h2 class="text-center mb-4">Seat Layout</h2>
+
+        <!-- Coach Buttons -->
+        <div class="d-flex justify-content-center gap-3 mb-4">
+            <button class="btn btn-primary" onclick="coach1()">Coach 1</button>
+            <button class="btn btn-success" onclick="coach2()">Coach 2</button>
+            <button class="btn btn-warning text-dark" onclick="coach3()">Coach 3</button>
+            <button class="btn btn-danger" onclick="coach4()">Coach 4</button>
+        </div>
+        <div id="seatLayout" class="text-center"></div>
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
