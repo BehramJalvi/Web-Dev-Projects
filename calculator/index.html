@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form id ="calculator-form">
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="a" placeholder="Number 1" required>
+            <label for="a">Number 1</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="b" placeholder="Number 2" required>
+            <label for="b">Number 2</label>
+        </div>
+
+        <div class="form-floating">
+        <select class="form-select" id="operation" aria-label="Floating label select example">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+        <label for="floatingSelect">Operation</label>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary" onclick="handleCalculation(); return false;">Calculate</button>
+    </form>
+    <div id="result" class="mt-3">
+        <h2>Result: <h5 id="resultValue">
+            0
+        </h5></h2>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
