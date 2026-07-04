@@ -13,7 +13,7 @@
 
         <h2 class="text-center mb-4">Seat Layout</h2>
 
-        <!-- Coach Buttons -->
+        
         <div class="d-flex justify-content-center gap-3 mb-4">
             <button class="btn btn-primary" onclick="coach1()">Coach 1</button>
             <button class="btn btn-success" onclick="coach2()">Coach 2</button>
@@ -25,11 +25,62 @@
 
     </div>
 
-    <!-- Bootstrap JS -->
+    <form class="form-control" method="get" action="index.html"  accept="">
+        
+        <label>First Name</label>
+        <input id="first_name" type="text" onkeydown="" name="first_name" placeholder="Enter your name">
+        <div id="feedback"></div>
+        <label>Address</label>
+        <textarea name="address" rows="5" cols="20"></textarea>
+
+        <label>Gender</label>
+        <input id="Male" type="radio" name="gender" value="Male"><label for="Male">Male</label>
+        <input id="Female" type="radio" name="gender" value="Female"><label for="Female">Female</label>
+
+        <label>Documents checklist</label>
+        <input id="ID" type="checkbox" name="id" value="id"><label for="ID">ID Card</label>
+        <input id="Matric" type="checkbox" name="id" value="Matric"><label for="Matric">Matric</label>
+        <input id="FSC" type="checkbox" name="id" value="FSC"><label for="FSC">FSC</label>
+        <input id="BS" type="checkbox" name="id" value="BS"><label for="BS">BS</label>
+
+        <input type="file" accept=".png">
+
+        <select name="skills">
+            <option value="Programming">Programming</option>
+            <option value="Design">Design</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Your Script -->
+    
     <script src="script.js"></script>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
+        // Perform your validation logic here
+        const firstName = document.getElementById('first_name');
+        const feedback = document.getElementById('feedback');
+
+        if (firstName.value.trim() === '') {
+            feedback.textContent = 'First name is required.';
+            feedback.style.color = 'red';
+            firstName.focus();
+            firstName.style.borderColor = 'red';
+
+        } else {
+            feedback.textContent = '';
+            // You can submit the form or perform other actions here
+            alert('Form submitted successfully!');
+        }
+
+    });
+</script>
 </body>
 </html>
